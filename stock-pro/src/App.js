@@ -1,5 +1,4 @@
 import { createContext,useContext } from 'react';
-import logo from './logo.svg';
 import Navbar from './Components/Navbar';
 import StockNews from './Components/StockNews';
 import Header from './Components/Header';
