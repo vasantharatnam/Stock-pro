@@ -4,14 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
     "server": "nodemon index.js",
-=======
     "dev": "nodemon index.js",
->>>>>>> 60293c4a0938b2982e2121835d27d9cb3d8d7de5
->>>>>>> Stashed changes
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm i"
   },
