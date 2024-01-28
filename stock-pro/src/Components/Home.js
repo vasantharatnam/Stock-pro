@@ -16,7 +16,7 @@ const Home = ({isLoged,changeArti,articleData}) => {
     },
     headers: {
       'content-type': 'text/plain',
-      'X-RapidAPI-Key': '1cb23367b2msh72c15963839288ep1ce9ecjsn6ec3454814e2',
+      'X-RapidAPI-Key': '39a6df8df7mshd6a294058ad683ap10351ejsn7809988b2971',
       'X-RapidAPI-Host': 'apidojo-yahoo-finance-v1.p.rapidapi.com'
     },
     data: 'Pass in the value of uuids field returned right in this endpoint to load the next page, or leave empty to load first page'
