@@ -42,13 +42,13 @@ const Navbar = ({isLooged,articleData}) => {
           {isLooged ? 
           (<>
           <NavLink to="/" style={{textDecoration:'none'}}>
-          <a className=" btn btn-info">Logout
+          <a className="btn btn-info" aria-current="page">Logout
           </a>
           </NavLink>
             </>) :
             (<>
             <NavLink to="/login" style={{textDecoration:'none'}}>
-            <a className=" btn btn-info">Login</a>
+            <a className="btn btn-info" aria-current="page">Login</a>
             </NavLink>
             </>)}
         </li>
