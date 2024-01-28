@@ -21,6 +21,8 @@ const Login = ({onLogin, isLoged}) => {
     try {
       const loginResult = await getLogin(username, password);
   
+      console.log(loginResult,"in login page");
+
       if (loginResult) {
         console.log('Logging in with:', { username, password });
         onLogin(true);
@@ -28,7 +30,7 @@ const Login = ({onLogin, isLoged}) => {
         history('/');
       } else {    
         console.log('Wrong Password or Username');
-        onLogin(false);
+        // onLogin(false);
         history('/login');
       }
     } catch (error) {

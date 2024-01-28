@@ -2,6 +2,7 @@ import {React,useEffect,useState} from 'react'
 import Layout from './Layout'
 import {useNavigate} from 'react-router-dom';
 import LiveChart from './LiveChart';
+import Login from './Login';
 
 const Stockitem = ({isLoged}) => {
   
@@ -24,7 +25,13 @@ const Stockitem = ({isLoged}) => {
     return (
         <>
         <Layout isLoged={isLoged}>
-            <LiveChart symboli='IBM' />
+            {logStatus ? 
+            (<>
+                <LiveChart symboli='IBM' />
+            </>) : 
+            (<>
+                <Login onLogin={setLogStatus} isLoged={isLoged} />
+            </>)}
         </Layout>
         </>
 
