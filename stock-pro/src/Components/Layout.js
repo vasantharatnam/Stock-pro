@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 
-const Layout = ({children,isLoged,articleData}) => {
+const Layout = ({children,onLogout,isLoged,articleData}) => {
   
   const [article,setArticles] = useState([]);
   
@@ -12,7 +12,7 @@ const Layout = ({children,isLoged,articleData}) => {
   return (
     <>
     <div>
-      <Navbar articleData={articleData} isLooged={isLoged} />
+      <Navbar onLogout={onLogout} articleData={articleData} isLooged={isLoged} />
         {children}
     </div>
     </>

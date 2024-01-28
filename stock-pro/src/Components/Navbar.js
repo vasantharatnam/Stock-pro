@@ -1,10 +1,17 @@
 import React,{useState} from 'react'
 import {useEffect} from 'react'
 import {Link,NavLink,Route } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
-
-const Navbar = ({isLooged,articleData}) => {
+const Navbar = ({onLogout,isLooged,articleData}) => {
    
+    const history = useNavigate();
+
+    const handleClick = () => {
+      onLogout();
+      history('/');
+    }
+
   return (
     <>
     <div>
@@ -41,7 +48,7 @@ const Navbar = ({isLooged,articleData}) => {
         <li className="nav-item">
           {isLooged ? 
           (<>
-          <NavLink to="/" style={{textDecoration:'none'}}>
+          <NavLink to="/" onClick={handleClick} style={{textDecoration:'none'}}>
           <a className="btn btn-info" aria-current="page">Logout
           </a>
           </NavLink>

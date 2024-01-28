@@ -77,10 +77,10 @@ const Home = ({isLoged,changeArti,articleData}) => {
        </div>
       <div className  ="row" style={{justifyContent: 'space-between'}} >
 
-        {articles.slice(0,4).map((article) =>{
+        {articles.slice(0,4).map((article,index) =>{
           return(
             <div className="col-md-3">
-            <StockNewsitem title={article.content.title} description={article.content.provider.displayName} imageurl={article.content.thumbnail.resolutions[0].url} newsurl={article.content.previewUrl} isLoged = {logStatus}/>
+            <StockNewsitem key={index} title={article.content.title} description={article.content.provider.displayName} imageurl={article.content.thumbnail.resolutions[0].url} newsurl={article.content.previewUrl} isLoged = {logStatus}/>
             </div>
           )
         })}

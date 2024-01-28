@@ -5,7 +5,7 @@ import axios from 'axios';
 
 // {isLooged})
 
-export default function StockNews({ isLoged,articleData}) {
+export default function StockNews({ onLogout,isLoged,articleData}) {
 
   const [loginStatus, isLoggedIn] = useState(false);
   const [articles , setArticles] = useState([]);
@@ -56,17 +56,17 @@ export default function StockNews({ isLoged,articleData}) {
   },[isLoged]);
 
   return (
-    <Layout isLoged = {loginStatus}>
+    <Layout onLogout = {onLogout} isLoged = {loginStatus}>
     <div className='container my-3 pb-5'>
        <div className="pb-3" style = {{display: 'flex', justifyContent: 'space-between'}}>
         <h2 style={{color: 'white'}}>Stock News</h2>
        </div>
       <div className  ="row" style={{justifyContent: 'space-between'}} >
 
-        {articles.map((article) =>{
+        {articles.map((article,index) =>{
           return(
             <div className="col-md-3">
-            <StockNewsitem title={article.content.title} description={article.content.provider.displayName} imageurl={article.content.thumbnail.resolutions[0].url} newsurl={article.content.previewUrl} isLoged = {loginStatus}/>
+            <StockNewsitem key={index} title={article.content.title} description={article.content.provider.displayName} imageurl={article.content.thumbnail.resolutions[0].url} newsurl={article.content.previewUrl} isLoged = {loginStatus}/>
             </div>
           )
         })}

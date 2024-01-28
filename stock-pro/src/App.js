@@ -23,6 +23,10 @@ const App = () => {
     console.log("in App.js");
   }
 
+  const handleLogout = () => {
+    setIsLogin(false);
+  }
+
   const changeArticles = (inp) => {
     setArticles(inp);
   }
@@ -31,12 +35,12 @@ const App = () => {
 
     <div className="container my-3">
        <Routes>
-       <Route  path = "/" element = {<Home isLoged = {isLogin} changeArti={changeArticles} articleData = {article} />}></Route>
-       <Route  path ="/login"  element = {<Login onLogin = {changeLogin} isLoged = {isLogin} />}></Route>
-       <Route  path ="/StockNews" element = {<StockNews isLoged = {isLogin} articleData = {article} />}></Route>
-       <Route  path ="/signup" element = {<Signup isLoged={isLogin}/>}></Route>
-       <Route  path ="/stockChart" element = {<Stockitem isLoged={isLogin}/>}></Route>
-       <Route path ="/forgot-password" element = {<ForgotPassword />}></Route>
+       <Route  path = "/" element = {<Home onLogout = {handleLogout} isLoged = {isLogin} changeArti={changeArticles} articleData = {article} />}></Route>
+       <Route  path ="/login"  element = {<Login onLogout = {handleLogout} onLogin = {changeLogin} isLoged = {isLogin} />}></Route>
+       <Route  path ="/StockNews" element = {<StockNews onLogout = {handleLogout} isLoged = {isLogin} articleData = {article} />}></Route>
+       <Route  path ="/signup" element = {<Signup onLogout = {handleLogout} isLoged={isLogin}/>}></Route>
+       <Route  path ="/stockChart" element = {<Stockitem onLogout = {handleLogout} isLoged={isLogin}/>}></Route>
+       <Route path ="/forgot-password" element = {<ForgotPassword onLogout = {handleLogout} />}></Route>
        </Routes>
     </div>
 
