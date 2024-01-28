@@ -52,7 +52,7 @@ export default function StockNews({ isLoged,articleData}) {
       setArticles(articleData);
       console.log("In stockNews",loginStatus);
       console.log("In stockNews",articles);
-      artles();
+      // artles();
   },[isLoged]);
 
   return (
