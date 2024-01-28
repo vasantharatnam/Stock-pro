@@ -4,6 +4,7 @@ import { faUser, faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { getSignin } from '../apiHelper/getSignin';
 import {useNavigate} from 'react-router-dom';
 import Layout from './Layout';
+import {Link} from 'react-router-dom'
 const Signup = ({isLoged}) => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -145,7 +146,12 @@ const Signup = ({isLoged}) => {
           style={alreadyHaveAccountStyle}
           onClick={handleAlreadyHaveAccount}
           >
-          Already have an account? <span style={{ fontStyle: 'italic', fontWeight:'bold' }}><a href="/login">Click here.</a></span>
+          Already have an account? 
+          <span style={{ fontStyle: 'italic', fontWeight:'bold' }}>
+            <Link to="/login">
+            <a >Click here.</a>
+            </Link>
+            </span>
         </div>
       </form>
     </div>
