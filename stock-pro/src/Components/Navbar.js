@@ -39,7 +39,18 @@ const Navbar = ({isLooged,articleData}) => {
       </ul>
       <ul className="navbar-nav">
         <li className="nav-item">
-          {isLooged ? (<><a className=" btn btn-info" href="/">Logout</a></>) :(<><a className=" btn btn-info" href="/login">Login</a></>)}
+          {isLooged ? 
+          (<>
+          <Link to="/" style={{textDecoration:'none'}}>
+          <a className=" btn btn-info">Logout
+          </a>
+          </Link>
+            </>) :
+            (<>
+            <Link to="/login" style={{textDecoration:'none'}}>
+            <a className=" btn btn-info">Login</a>
+            </Link>
+            </>)}
         </li>
       </ul>
     </div>
