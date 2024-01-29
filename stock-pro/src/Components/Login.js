@@ -12,6 +12,7 @@ const Login = ({onLogin, isLoged}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isLogin, setIsLogin] = useState(false);
+  const [message, setMessage] = useState('');
   const history = useNavigate();
 
 
@@ -31,6 +32,7 @@ const Login = ({onLogin, isLoged}) => {
       } else {    
         console.log('Wrong Password or Username');
         // onLogin(false);
+        setMessage('Wrong Password or Username');
         history('/login');
       }
     } catch (error) {
@@ -119,12 +121,13 @@ const Login = ({onLogin, isLoged}) => {
         </button>
         
           <Link to ="/forgot-password">
-           <a>Forgot Password?</a>
+           <a> Forgot Password?</a>
           </Link>
 
       </form>
     </div>
     </div>
+    <p style={{ color: 'white',fontstyle: 'bold' ,marginTop: '10px',textAlign: 'center'}}>{message}</p>
           </Layout>
   );
 };

@@ -11,7 +11,7 @@ import axios from 'axios';
 import {React,useEffect,useState} from 'react';
 import './App.css';
 import {Routes , Route, Link} from 'react-router-dom';
-axios.defaults.baseURL = "http://localhost:3001";
+// axios.defaults.baseURL = "http://localhost:3001";
 
 const App = () => {
   
