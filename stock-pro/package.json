@@ -1,7 +1,7 @@
 {
   "name": "stock-pro",
   "homepage": ".",
-  "proxy": "https://stock-pro-077u.onrender.com:3001",
+  "proxy": "https://stock-pro-077u.onrender.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
