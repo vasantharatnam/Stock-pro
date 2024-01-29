@@ -17,7 +17,7 @@ const ForgotPassword =  () => {
     const handleForgotPassword = async () => {
         try {
             console.log('Forgot ',email);
-          const response = await axios.post('/verificationCode', { email:email });
+          const response = await axios.post('https://stock-pro-077u.onrender.com/verificationCode', { email:email });
           
             console.log("datiko ", response );
 
@@ -43,7 +43,7 @@ const ForgotPassword =  () => {
         try {
 
             console.log('Reset ',email, verificationCode, newPassword);
-          const response = await axios.post('/newPassword', { email, verificationCode, newPassword });
+          const response = await axios.post('https://stock-pro-077u.onrender.com/newPassword', { email, verificationCode, newPassword });
           
           if(response.data === 'Password reset successfully')
           {

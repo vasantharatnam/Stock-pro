@@ -3,7 +3,7 @@ import axios from "axios";
 
 const getLogin = async (username,password) => {
     try{
-        const response = await axios.post("/login",{username:username,password:password});
+        const response = await axios.post("https://stock-pro-077u.onrender.com/login",{username:username,password:password});
         console.log("Logged in",response);
         if (response.data.message === "Login Successful" && response && response.data) {
             return true; // Login successful

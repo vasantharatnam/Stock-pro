@@ -4,7 +4,7 @@ import axios from "axios";
 export const getSignin = async (username,email,password) => {
     
     try{
-        const response = await axios.post("/signup",{username:username,email:email,password:password});
+        const response = await axios.post("https://stock-pro-077u.onrender.com/signup",{username:username,email:email,password:password});
         console.log("Signed in",response);
         if (response.data.message === "Succesfully Inserted" && response && response.data) {
             return true; // SignIn successful
